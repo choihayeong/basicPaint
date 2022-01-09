@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Paint (그림판 만들기)</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="content">
+            <div class="d-flex">
+                <div class="btn-wrap btn-wrap--tool">
+                    <button type="button" class="btn btn--pen" title="펜" data-canvas="pen">
+                        <i class="fas fa-pen"></i>
+                    </button>
+                    <button type="button" class="btn btn--draw-rect" title="사각형 그리기" data-canvas="rect">
+                        <i class="far fa-square"></i>
+                    </button>
+                    <button type="button" class="btn btn--fill" title="채우기" data-canvas="fill">
+                        <i class="fas fa-brush"></i>
+                    </button>
+                    <!-- <button type="button" class="btn btn--draw-circle" data-button="circle">동그라미 그리기</button> -->
+                    <button type="reset" class="btn btn--reset" data-button="reset">reset</button>
+                </div>
+                <div class="d-flex input-wrap ml-auto">
+                    <input type="color" name="chosen-color" id="chosen-color" class="color-picker">
+                    <div class="range-group">
+                        <input type="range" name="chosen-px" id="chosen-px" class="range-picker" min="1" max="72" value="1">
+                        <label for="chosen-px" class="range-label">1</label>px
+                    </div>
+                    <button type="button" title="저장하기" class="btn btn--save">
+                        <i class="fas fa-save"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="canvas-wrap">
+                <div class="canvas-bg"></div>
+                <canvas id="pen-paint" class="canvas canvas--pen on" data-canvas="pen" width="700" height="700"></canvas>
+                <canvas id="rect-paint" class="canvas canvas--rect" data-canvas="rect" width="700" height="700"></canvas>
+            </div>
+        </div>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
