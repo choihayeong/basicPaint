@@ -19,9 +19,9 @@ colorPicker.addEventListener("change", event => {
     // 채우기
     btnFill.addEventListener("click", function() {
         contextPen.fillStyle = event.target.value;
-        contextPen.fillRect(0, 0, 700, 700);
+        contextPen.fillRect(0, 0, 750, 750);
         contextRect.fillStyle = event.target.value;
-        contextRect.fillRect(0, 0, 700, 700);
+        contextRect.fillRect(0, 0, 750, 750);
     });
 });
 
